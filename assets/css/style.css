@@ -114,9 +114,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #f0f1f2;
+    border: 1px solid #edf2f4;
     border-radius: 1rem;
-    color: #4e4e4e;
     padding: 1rem;
 }
 
@@ -151,7 +150,7 @@
     padding: 0.7rem 2rem;
     margin-top: 0.5rem;
     border-radius: 0.5rem;
-    background-color: #0083c2;
+    background-color: #219ebc;
     color: #fff;
 }
 
@@ -161,8 +160,30 @@
 }
 
 .pagination {
-    padding: 1rem;
-    border: 1px solid black;    
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem; 
+}
+
+.page-link {
+    background-color: #219ebc;
+    border: 1px solid #edf2f4;
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+.page-link:first-child {
+    border-radius: .7rem 0 0 .7rem;
+}
+
+.page-link:last-child {
+    border-radius: 0 .7rem .7rem 0;
+}
+
+
+.page-link:hover {
+    background-color: #edf2f4;
+    color: #000;
 }
 
 /*----------- FOOTER -------------*/
