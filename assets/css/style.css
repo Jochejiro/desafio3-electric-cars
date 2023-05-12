@@ -12,7 +12,7 @@
 .container {
     height: 100vh;
     display: grid;
-    grid-template-rows: auto auto 10fr auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
         "navbar"
         "filter"
@@ -95,10 +95,19 @@
 
 .main {
     grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.cars{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
+    overflow-y: auto;
+    height: calc(100vh - 20rem);
 }
 
 .car {
@@ -150,6 +159,11 @@
 .car-btn:hover {
     background-color: #edf2f4;
     color: #000;
+}
+
+.pagination {
+    padding: 1rem;
+    border: 1px solid black;    
 }
 
 /*----------- FOOTER -------------*/
@@ -205,8 +219,9 @@
         justify-content: left;
     }
 
-    .main {
+    .cars {
         grid-template-columns: 1fr 1fr;
+        height: calc(100vh - 16rem);
     }
 }
 
@@ -242,7 +257,8 @@
         padding: 1.95rem;
     }
 
-    .main {
+    .cars {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: calc(100vh - 12rem);
     }
 }
